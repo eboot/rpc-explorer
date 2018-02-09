@@ -1,6 +1,6 @@
 {
   "name": "smart-rpc-explorer",
-  "version": "1.0.2",
+  "version": "1.0.0",
   "scripts": {
     "start": "node ./bin/www"
   },
