@@ -10,9 +10,9 @@ div(class="tab-content")
 	div(id="tab-summary", class="tab-pane active", role="tabpanel")
 		if (result.getblock.hash == "000000000019d6689c085ae165831e934ff763ae46a2a6c172b3f1b60a8ce26f")
 			div(class="alert alert-success", style="padding-bottom: 0;")
-				h4(class="alert-heading h5") This is the Bitcoin Genesis Block!
+				h4(class="alert-heading h5") This is the SmartCash Genesis Block!
 				:markdown-it
-					This is the first block in the Bitcoin blockchain. This block was mined by Bitcoin's anonymous/pseudonymous creator Satoshi Nakamoto. If you're interested, you can [read more about the genesis block](https://en.bitcoin.it/wiki/Genesis_block).
+					This is the first block in the SmartCash blockchain. This block was mined by SmartCash's anonymous/pseudonymous creator Satoshi Nakamoto. If you're interested, you can [read more about the genesis block](https://en.bitcoin.it/wiki/Genesis_block).
 		
 		table(class="table")
 			tr
@@ -28,7 +28,7 @@ div(class="tab-content")
 
 					else if (result.getblock.hash == "000000000019d6689c085ae165831e934ff763ae46a2a6c172b3f1b60a8ce26f")
 						span N/A - This is the 
-						a(href="https://en.bitcoin.it/wiki/Genesis_block") Bitcoin Genesis Block
+						a(href="https://en.bitcoin.it/wiki/Genesis_block") SmartCash Genesis Block
 
 			tr
 				th(class="table-active properties-header") Next Block Hash
@@ -140,7 +140,7 @@ div(class="tab-content")
 												th 1
 												td
 													span(class="tag monospace") coinbase
-													span(class="monospace")  Newly minted BTC
+													span(class="monospace")  Newly minted SMART
 												td(class="monospace") #{utils.getBlockReward(result.getblock.height)}
 
 										each txInput, txInputIndex in result.txInputsByTransaction[tx.txid]
