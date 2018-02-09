@@ -28,6 +28,10 @@ thead {
 	background-color: #ffbd42!important;
 }
 
+.table td, .table th {
+	border-top: 1px solid #af7608;
+}
+
 img.header-image {
 	margin-top: -10px;
 	margin-bottom: -5px;
