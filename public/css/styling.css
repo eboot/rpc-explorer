@@ -3,6 +3,10 @@ body {
 	background-color: #f7e4c4;
 }
 
+code {
+	background-color: #f5eee2;
+}
+
 hr {
 	margin: 15px 0;
 }
@@ -103,7 +107,7 @@ code, .monospace {
 	border-color: #a76f0b!important;
 }
 
-.alert-info {
+.alert-info .alert-success {
 	background-color: #fde2b1;
 	border-color: #f5b43e;
 	color: #462d00;
