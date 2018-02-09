@@ -46,16 +46,16 @@ app.use(function(req, res, next) {
 	res.locals.session = req.session;
 	res.locals.debug = env.debug;
 
-	if (env.bitcoind && env.bitcoind.rpc) {
-		req.session.host = env.bitcoind.host;
-		req.session.port = env.bitcoind.port;
-		req.session.username = env.bitcoind.rpc.username;
+	if (env.smartcashd && env.smartcashd.rpc) {
+		req.session.host = env.smartcashd.host;
+		req.session.port = env.smartcashd.port;
+		req.session.username = env.smartcashd.rpc.username;
 
 		global.client = new bitcoin.Client({
-			host: env.bitcoind.host,
-			port: env.bitcoind.port,
-			user: env.bitcoind.rpc.username,
-			pass: env.bitcoind.rpc.password,
+			host: env.smartcashd.host,
+			port: env.smartcashd.port,
+			user: env.smartcashd.rpc.username,
+			pass: env.smartcashd.rpc.password,
 			timeout: 5000
 		});
 	}

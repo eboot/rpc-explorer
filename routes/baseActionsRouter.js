@@ -45,7 +45,7 @@ router.get("/", function(req, res) {
 			res.render("index");
 		});
 	}).catch(function(err) {
-		res.locals.userMessage = "Unable to connect to SmartCash Node at " + env.bitcoind.host + ":" + env.bitcoind.port;
+		res.locals.userMessage = "Unable to connect to SmartCash Node at " + env.smartcashd.host + ":" + env.smartcashd.port;
 
 		res.render("index");
 	});
@@ -60,7 +60,7 @@ router.get("/node-info", function(req, res) {
 		res.render("node-info");
 
 	}).catch(function(err) {
-		res.locals.userMessage = "Unable to connect to SmartCash Node at " + env.bitcoind.host + ":" + env.bitcoind.port;
+		res.locals.userMessage = "Unable to connect to SmartCash Node at " + env.smartcashd.host + ":" + env.smartcashd.port;
 
 		res.render("node-info");
 	});
@@ -78,7 +78,7 @@ router.get("/mempool", function(req, res) {
 			res.render("mempool");
 		});
 	}).catch(function(err) {
-		res.locals.userMessage = "Unable to connect to SmartCash Node at " + env.bitcoind.host + ":" + env.bitcoind.port;
+		res.locals.userMessage = "Unable to connect to SmartCash Node at " + env.smartcashd.host + ":" + env.smartcashd.port;
 
 		res.render("mempool");
 	});
@@ -159,7 +159,7 @@ router.get("/blocks", function(req, res) {
 			res.render("blocks");
 		});
 	}).catch(function(err) {
-		res.locals.userMessage = "Unable to connect to SmartCash Node at " + env.bitcoind.host + ":" + env.bitcoind.port;
+		res.locals.userMessage = "Unable to connect to SmartCash Node at " + env.smartcashd.host + ":" + env.smartcashd.port;
 
 		res.render("blocks");
 	});
@@ -211,7 +211,7 @@ router.post("/search", function(req, res) {
 			});
 		});
 	}).catch(function(err) {
-		res.locals.userMessage = "Unable to connect to SmartCash Node at " + env.bitcoind.host + ":" + env.bitcoind.port;
+		res.locals.userMessage = "Unable to connect to SmartCash Node at " + env.smartcashd.host + ":" + env.smartcashd.port;
 
 		res.render("index");
 	});
