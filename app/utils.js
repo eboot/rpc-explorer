@@ -36,15 +36,11 @@ function hex2ascii(hex) {
 }
 
 function getBlockReward(blockHeight) {
-	var eras = [ new Decimal8(50) ];
-	for (var i = 1; i < 34; i++) {
-		var previous = eras[i - 1];
-		eras.push(new Decimal8(previous).dividedBy(2));
+	if(blockHeight <= 143500) {
+	  return 5000;
+	} else {
+	  return Math.round(5000 * (143500/blockHeight));
 	}
-
-	var index = Math.floor(blockHeight / 210000);
-
-	return eras[index];
 }
 
 function splitArrayIntoChunks(array, chunkSize) {

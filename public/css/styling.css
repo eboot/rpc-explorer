@@ -111,7 +111,7 @@ code, .monospace {
 	border-color: #a76f0b!important;
 }
 
-.alert-info .alert-success {
+.alert-info, .alert-success {
 	background-color: #fde2b1;
 	border-color: #f5b43e;
 	color: #462d00;
