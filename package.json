@@ -1,7 +1,6 @@
 {
   "name": "smart-rpc-explorer",
-  "version": "1.0.0",
-  "private": false,
+  "version": "1.0.2",
   "scripts": {
     "start": "node ./bin/www"
   },
@@ -26,5 +25,6 @@
     "pug": "2.0.0-rc.2",
     "serve-favicon": "~2.3.2",
     "simple-git": "1.73.0"
-  }
+  },
+  "license": "MIT"
 }
