@@ -1,9 +1,27 @@
 body {
-		font: 14px 'Open Sans', "Lucida Grande", Helvetica, Arial, sans-serif;
+	font: 14px 'Open Sans', "Lucida Grande", Helvetica, Arial, sans-serif;
+	background-color: #f7e4c4;
 }
 
 hr {
 	margin: 15px 0;
+}
+
+a {
+	color: #8a5900;
+	font-weight: bold;
+}
+
+a:hover {
+	color: #6d4600;
+}
+
+::selection {
+	background-color: #f1b341;
+}
+
+thead { 
+	background-color: #ffbd42!important;
 }
 
 img.header-image {
@@ -42,4 +60,96 @@ code, .monospace {
 
 .data-cell, .data-header {
 	text-align: right;
+}
+
+.btn-primary {
+	color: black;
+	background-color: #fdbb44;
+	border-color: #a07703;
+}
+
+.btn-primary:hover {
+	color: black;
+	background-color: #ffa400;
+	border-color: #a07703;
+}
+
+.btn-primary:active {
+        color: white!important;
+        background-color: #bf7b00!important;
+        border-color: #a07703!important;
+	box-shadow: 0px 1px 1px #f5b43e inset, 2px 2px 4px #f5b43e!important;
+}
+
+.btn-primary:focus {
+	box-shadow: 0px 1px 1px #f5b43e inset, 2px 2px 4px #f5b43e!important;
+}
+
+.bg-dark {
+	background-color: #f1b341!important;
+}
+
+.navbar-brand {
+	font-weight: bold;
+}
+
+.nav-link {
+	font-weight: bold;
+}
+
+.nav-link.active {
+	color: #495057!important;
+	background-color: #f5b43e!important;
+	border-color: #a76f0b!important;
+}
+
+.alert-info {
+	background-color: #fde2b1;
+	border-color: #f5b43e;
+	color: #462d00;
+}
+
+.form-control {
+	background-color: #fee3b3;
+}
+
+.form-control:hover {
+        background-color: #fee3b3;
+        box-shadow: 0px 0px 0px #f5b43e inset, 0px 0px 0px #f5b43e!important;
+}
+
+.form-control:focus {
+        background-color: #fee3b3;
+	box-shadow: 0px 1px 1px #f5b43e inset, 2px 2px 4px #f5b43e!important;
+}
+
+.card {
+	background-color: #f8e5c5;
+}
+
+.tag {
+	color: black;
+	background-color: #f5b43e;
+}
+
+
+.page-link {
+	color: #495057!important;
+	background-color: #f3c97e!important;
+}
+
+.pagination-lg .page-link:hover {
+	background-color: white;
+}
+
+.page-item.active .page-link {
+        color: #495057!important;
+        background-color: #f5b43e!important;
+        border-color: #a76f0b!important;
+}
+
+.pagination-lg .page-link {
+	padding: .25rem 0.75rem;
+	font-size: 1.0rem;
+	line-height: 1.5;
 }
