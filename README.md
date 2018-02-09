@@ -1,4 +1,4 @@
-# ![SMART Explorer](https://i.imgur.com/mJhGo3d.jpg?1) SMART Explorer
+# ![SMART Explorer](https://smartcash.cc/wp-content/uploads/2017/11/smartcash_thin_txt_s-300x135.png) SMART Explorer
 
 Simple, stateless SmartCash blockchain explorer, via RPC. Built with Node.js, express, bootstrap-v4.
 
