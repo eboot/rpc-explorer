@@ -109,7 +109,7 @@ div(class="tab-content")
 					span all
 				else
 					span #{(offset + 1)} - #{Math.min(offset + limit, txCount)}
-		
+
 		each tx, txIndex in result.transactions
 			//pre
 			//	code #{JSON.stringify(tx, null, 4)}
@@ -120,7 +120,7 @@ div(class="tab-content")
 				div(class="card-body")
 					//pre
 					//	code #{JSON.stringify(result.txInputsByTransaction[tx.txid], null, 4)}
-					if (true)
+					if (tx && tx.txid)
 						div(class="row")
 							div(class="col-md-6")
 								h6 Input (#{tx.vin.length.toLocaleString()})
