@@ -182,7 +182,7 @@ block content
 														a(href=("/tx/" + txInput.txid + "#output-" + result.getrawtransaction.vin[txInputIndex].vout), class="monospace") #{txInput.txid.substring(0, 14)}..., Output ##{result.getrawtransaction.vin[txInputIndex].vout + 1}
 												td
 													if (vout.value)
-														span(class="monospace") #{vout.value}
+														span(class="monospace") Σ #{vout.value}
 
 									tr
 										td
