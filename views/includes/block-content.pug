@@ -142,8 +142,8 @@ div(class="tab-content")
 												th 1
 												td
 													span(class="tag monospace") coinbase
-													span(class="monospace")  Newly minted SmartCash
-												td(class="monospace") #{utils.getBlockReward(result.getblock.height)}
+													span(class="monospace")  Newly minted SMART
+												td(class="monospace") Σ #{utils.getBlockReward(result.getblock.height)}
 
 										each txInput, txInputIndex in result.txInputsByTransaction[tx.txid]
 											if (txInput)
@@ -163,7 +163,7 @@ div(class="tab-content")
 													td
 														if (vout.value)
 															- totalInputValue = totalInputValue.plus(new Decimal(vout.value));
-															span(class="monospace") #{vout.value}
+															span(class="monospace") Σ #{vout.value}
 
 										- var coinbaseCount = tx.vin[0].coinbase ? 1 : 0;
 										if ((tx.vin.length - coinbaseCount) > result.txInputsByTransaction[tx.txid].length)
@@ -177,7 +177,7 @@ div(class="tab-content")
 												td
 												td
 												td
-													strong(class="monospace") #{totalInputValue}
+													strong(class="monospace") Σ #{totalInputValue}
 									
 
 							div(class="col-md-6")
@@ -208,14 +208,14 @@ div(class="tab-content")
 															span(class="monospace") OP_RETURN: 
 															span(class="monospace text-muted") #{utils.hex2ascii(vout.scriptPubKey.asm.substring("OP_RETURN ".length))}
 												td
-													span(class="monospace") #{vout.value}
+													span(class="monospace") Σ #{vout.value}
 													- totalOutputValue = totalOutputValue.plus(vout.value);
 
 										tr
 											td
 											td
 											td
-												strong(class="monospace") #{totalOutputValue}
+												strong(class="monospace") Σ #{totalOutputValue}
 					else if (result.getblock.height == 0)
 						table(class="table mb-0")
 							thead
