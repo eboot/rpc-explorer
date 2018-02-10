@@ -117,6 +117,8 @@ div(class="tab-content")
 				div(class="card-header")
 					if (tx && tx.txid)
 						a(href=("/tx/" + tx.txid), class="monospace") #{tx.txid}
+					else if (result.getblock.height == 0)
+						a(href=(""), class="monospace") #{result.getblock.tx}
 				div(class="card-body")
 					//pre
 					//	code #{JSON.stringify(result.txInputsByTransaction[tx.txid], null, 4)}
@@ -214,6 +216,11 @@ div(class="tab-content")
 											td
 											td
 												strong(class="monospace") #{totalOutputValue}
+					else if (result.getblock.height == 0)
+						table(class="table mb-0")
+							thead
+								tr
+									th(style="text-align: center;") Genesis
 			//pre
 			//	code #{JSON.stringify(tx, null, 4)}
 
