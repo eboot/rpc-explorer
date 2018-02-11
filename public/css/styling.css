@@ -111,10 +111,16 @@ code, .monospace {
 	border-color: #a76f0b!important;
 }
 
-.alert-info, .alert-success {
-	background-color: #fde2b1;
+.alert-info {
+	background-color: #f39797;
 	border-color: #f5b43e;
-	color: #462d00;
+	color: black;
+}
+
+.alert-success {
+        background-color: #c6ffd7;
+        border-color: #07860b;
+        color: black;
 }
 
 .form-control {

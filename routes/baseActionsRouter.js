@@ -45,8 +45,8 @@ router.get("/", function(req, res) {
 			res.render("index");
 		});
 	}).catch(function(err) {
-		res.locals.userMessage = "Unable to connect to SmartCash Node at " + env.smartcashd.host + ":" + env.smartcashd.port;
-
+		console.log(err);
+		res.locals.userMessage = "Unable to connect to SmartCash Node at " + req.session.host + ":" + req.session.port;
 		res.render("index");
 	});
 });
@@ -60,8 +60,8 @@ router.get("/node-info", function(req, res) {
 		res.render("node-info");
 
 	}).catch(function(err) {
-		res.locals.userMessage = "Unable to connect to SmartCash Node at " + env.smartcashd.host + ":" + env.smartcashd.port;
-
+		res.locals.userMessage = "Unable to connect to SmartCash Node at " + req.session.host + ":" + req.session.port;
+		console.log(err);
 		res.render("node-info");
 	});
 });
@@ -78,8 +78,8 @@ router.get("/mempool", function(req, res) {
 			res.render("mempool");
 		});
 	}).catch(function(err) {
-		res.locals.userMessage = "Unable to connect to SmartCash Node at " + env.smartcashd.host + ":" + env.smartcashd.port;
-
+		res.locals.userMessage = "Unable to connect to SmartCash Node at " + req.session.host + ":" + req.session.port;
+		console.log(err);
 		res.render("mempool");
 	});
 });
@@ -152,15 +152,15 @@ router.get("/blocks", function(req, res) {
 				blockHeights.push(i);
 			}
 		}
-		
+
 		rpcApi.getBlocksByHeight(blockHeights).then(function(blocks) {
 			res.locals.blocks = blocks;
 
 			res.render("blocks");
 		});
 	}).catch(function(err) {
-		res.locals.userMessage = "Unable to connect to SmartCash Node at " + env.smartcashd.host + ":" + env.smartcashd.port;
-
+		res.locals.userMessage = "Unable to connect to SmartCash Node at " + req.session.host + ":" + req.session.port;
+		console.log(err);
 		res.render("blocks");
 	});
 });
@@ -182,38 +182,34 @@ router.post("/search", function(req, res) {
 
 			return;
 		}
-
+	}).catch(function(err) {
 		rpcApi.getBlockByHash(query).then(function(blockByHash) {
-			if (blockByHash) {
-				res.redirect("/block/" + query);
+                        if (blockByHash) {
+                                res.redirect("/block/" + query);
 
-				return;
-			}
-
+                                return;
+                        }
+		}).catch(function(err) {
 			if (isNaN(query)) {
-				req.session.userMessage = "No results found for query: " + query;
+                                req.session.userMessage = "No results found for query: " + query;
 
-				res.redirect("/");
+                                res.redirect("/");
 
-				return;
-			}
+                                return;
+                        }
 
 			rpcApi.getBlockByHeight(parseInt(query)).then(function(blockByHeight) {
-				if (blockByHeight) {
-					res.redirect("/block-height/" + query);
+                                if (blockByHeight) {
+                                        res.redirect("/block-height/" + query);
 
-					return;
-				}
+                                        return;
+                                }
+			}).catch(function(err) {
+                                req.session.userMessage = "No results found for query: " + query;
 
-				req.session.userMessage = "No results found for query: " + query;
-
-				res.redirect("/");
+                                res.redirect("/");
 			});
 		});
-	}).catch(function(err) {
-		res.locals.userMessage = "Unable to connect to SmartCash Node at " + env.smartcashd.host + ":" + env.smartcashd.port;
-
-		res.render("index");
 	});
 });
 
