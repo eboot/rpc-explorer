@@ -1,12 +1,12 @@
 {
-  "name": "smart-rpc-explorer",
+  "name": "rpc-explorer",
   "version": "1.0.0",
   "scripts": {
     "start": "node ./bin/www"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/msg768/smart-rpc-explorer.git"
+    "url": "https://github.com/smartcash/rpc-explorer.git"
   },
   "dependencies": {
     "body-parser": "~1.16.0",
@@ -14,7 +14,7 @@
     "bitcoin": "3.0.1",
     "crypto-js": "3.1.9-1",
     "debug": "~2.6.0",
-    "decimal.js":"7.2.3",
+    "decimal.js": "7.2.3",
     "express": "~4.14.1",
     "express-session": "1.15.2",
     "jstransformer-markdown-it": "^2.0.0",

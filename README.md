@@ -1,4 +1,4 @@
-# ![SmartCash Explorer](https://i.imgur.com/aR4rd5l.png?1)
+# ![SmartCash Explorer](https://smartcash.cc/wp-content/uploads/2017/11/smartcash_thin_txt_s-300x135.png)
 
 Simple, stateless SmartCash blockchain explorer, via RPC. Built with Node.js, express, bootstrap-v4.
 
@@ -28,6 +28,6 @@ I built this tool because I wanted to use it myself. Whatever reasons one might 
 2. `npm install` to install all required dependencies
 3. Optional: Uncomment the "smartcashd" section in [env.js](app/env.js) to automatically connect to the target node.
 4. `npm start` to start the local server
-5. Navigate to http://127.0.0.1:3002/
+5. Navigate to http://127.0.0.1/
 6. Connect using the RPC credentials for your target smartcash node (if you didn't edit [env.js](app/env.js) in Step 3)
 
