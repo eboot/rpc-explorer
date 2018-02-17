@@ -1,6 +1,6 @@
 body {
 	font: 14px 'Open Sans', "Lucida Grande", Helvetica, Arial, sans-serif;
-	background-color: #ffe4b4;
+	background-color: #fafafa;
 }
 
 code {
@@ -25,7 +25,7 @@ a:hover {
 }
 
 thead { 
-	background-color: #ffbd42!important;
+	background-color: #ffd700!important;
 }
 
 .table td, .table th {
@@ -94,7 +94,7 @@ code, .monospace {
 }
 
 .bg-dark {
-	background-color: #f1b341!important;
+	background-color: #ffd700!important;
 }
 
 .navbar-brand {
