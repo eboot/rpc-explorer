@@ -68,13 +68,13 @@ app.use(function(req, res, next) {
 			return;
 		}
 	}
-	
+
 	if (req.session.userMessage) {
 		res.locals.userMessage = req.session.userMessage;
-		
+
 		if (req.session.userMessageType) {
 			res.locals.userMessageType = req.session.userMessageType;
-			
+
 		} else {
 			res.locals.userMessageType = "info";
 		}
@@ -82,7 +82,7 @@ app.use(function(req, res, next) {
 
 	req.session.userMessage = null;
 	req.session.userMessageType = null;
-	
+
 	// make some var available to all request
 	// ex: req.cheeseStr = "cheese";
 

@@ -102,7 +102,12 @@ code, .monospace {
 }
 
 .nav-link {
+	border-color: #a76f0b!important;
 	font-weight: bold;
+}
+
+.nav-link:hover {
+	background-color: #ffd700!important;
 }
 
 .nav-link.active {
@@ -149,7 +154,6 @@ code, .monospace {
 
 .page-link {
 	color: #495057!important;
-	background-color: #ffe34c!important;
 	border-color: #9c8300!important;
 }
 
