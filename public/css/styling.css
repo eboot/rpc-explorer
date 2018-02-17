@@ -72,21 +72,21 @@ code, .monospace {
 
 .btn-primary {
 	color: black;
-	background-color: #fdbb44;
+	background-color: #f5ce00;
 	border-color: #a07703;
 }
 
 .btn-primary:hover {
 	color: black;
-	background-color: #ffa400;
+	background-color: #efc900;
 	border-color: #a07703;
 }
 
 .btn-primary:active {
         color: white!important;
-        background-color: #bf7b00!important;
+        background-color: #efc900!important;
         border-color: #a07703!important;
-	box-shadow: 0px 1px 1px #f5b43e inset, 2px 2px 4px #f5b43e!important;
+	box-shadow: 0px 1px 1px #ffd700 inset, 2px 2px 4px #f5b43e!important;
 }
 
 .btn-primary:focus {
@@ -107,7 +107,7 @@ code, .monospace {
 
 .nav-link.active {
 	color: #495057!important;
-	background-color: #f5b43e!important;
+	background-color: #ffd700!important;
 	border-color: #a76f0b!important;
 }
 
@@ -124,43 +124,44 @@ code, .monospace {
 }
 
 .form-control {
-	background-color: #fee3b3;
+	background-color: #fffae0;
 }
 
 .form-control:hover {
-        background-color: #fee3b3;
-        box-shadow: 0px 0px 0px #f5b43e inset, 0px 0px 0px #f5b43e!important;
+        background-color: #fafafa;
+        box-shadow: 0px 1px 1px #f5b43e inset, 2px 2px 4px #f5b43e!important;
 }
 
 .form-control:focus {
-        background-color: #fee3b3;
+        background-color: #fafafa;
 	box-shadow: 0px 1px 1px #f5b43e inset, 2px 2px 4px #f5b43e!important;
 }
 
 .card {
-	background-color: #f8e5c5;
+	background-color: #fffae0;
 }
 
 .tag {
 	color: black;
-	background-color: #f5b43e;
+	background-color: #ffd700;
 }
 
 
 .page-link {
 	color: #495057!important;
-	background-color: #f3c97e!important;
+	background-color: #ffe34c!important;
+	border-color: #9c8300!important;
 }
 
 .page-link:hover {
-        background-color: #f9b63b!important;
+        background-color: #ffd700!important;
 	box-shadow: 0px 1px 1px #f5b43e inset, 1px 1px 2px #f5b43e!important;
 	border-color: #a76f0b!important;
 }
 
 .page-item.active .page-link {
         color: #495057!important;
-        background-color: #f5b43e!important;
+        background-color: #ffd700!important;
         border-color: #a76f0b!important;
 }
 
