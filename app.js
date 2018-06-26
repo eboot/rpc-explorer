@@ -63,12 +63,12 @@ app.use(function(req, res, next) {
 	res.locals.host = req.session.host;
 	res.locals.port = req.session.port;
 
-	if (!["/", "/connect"].includes(req.originalUrl)) {
+/*	if (!["/", "/connect"].includes(req.originalUrl)) {
 		if (utils.redirectToConnectPageIfNeeded(req, res)) {
 			return;
 		}
 	}
-
+*/
 	if (req.session.userMessage) {
 		res.locals.userMessage = req.session.userMessage;
 
